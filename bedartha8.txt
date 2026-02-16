@@ -1,0 +1,85 @@
+interpreted code - binary doesnt exist
+python ----.py - in a hidden way it will convert to binary and execute and give you the output. you directly get the output.
+python does this
+
+this is slow (you always have to translate as it doesnt have binary)
+
+for development purposes interpreter code is faster (for small chunks of code less overload)
+
+compiled code - 
+python ---.py  - python program convert the txt file to binary and carries out the task in processor level
+
+output -> ----.executable (binary) - but you cannot open this in a txt file
+when you run the executable you get the output
+
+compiler for c language - GCC
+
+processor level - everything is binary
+assembly - low level language
+
+python object centered to pandas - data frames
+
+difference between pandas and numpy data read
+
+pd.read_csv("all-india-monthly-rainfall.csv")
+
+>>> stats={}
+... import numpy as np
+... read=pd.read_csv("all-india-monthly-rainfall.csv")
+... monthlystats=read.iloc[:,1:]
+... stats=monthlystats.mean()
+... print(stats)
+... 
+Jan    17.938143
+Feb    20.177352
+Mar    24.290892
+Apr    28.019427
+May    30.213770
+Jun    29.597887
+Jul    27.686744
+Aug    27.073413
+Sep    26.834226
+Oct    25.333398
+Nov    21.739744
+Dec    18.604321
+dtype: float64
+
+
+iloc is a method or attribute? method
+
+>>> stats={}
+... import numpy as np
+... read=pd.read_csv("all-india-monthly-rainfall.csv", index_col=0)
+... monthlystats=read.loc[1989]
+... stats=monthlystats.mean()
+... print(stats)
+... 
+24.753049999999998
+
+alt
+monthlystats=read.loc[1989,"Dec"]
+
+read=pd.read_csv("all-india-monthly-rainfall.csv", index_col=0)
+>>> read.index
+RangeIndex(start=1901, stop=2025, step=1, name='Year')
+
+>>> read.index.dtype
+dtype('int64')
+
+iloc - index locator - index based
+loc - locator - name based
+
+slicing vs indexing?
+
+slicing - slice more than 1 object
+
+indexing - points to one object
+
+use slicing for "1989" some core monsoon season and calculate the mean med std
+
+csvlook, csvkit
+
+conda install csvkit
+
+
+
