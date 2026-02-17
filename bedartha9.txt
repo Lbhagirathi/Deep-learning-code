@@ -1,0 +1,27 @@
+import pandas as pd
+
+if __name__ (in built variable has a value main) =="__main__":
+    print(__doc__)
+
+file1.py
+file2.py..... but all python file may not be a script, you can also have a python file with a bunch of imports and a bunch of commands(functions) just def a function doesnt mean it will run. So this file has a bunch of functions but they are not being called. 
+
+I have another python file and I can import the previous file, and write fileX(function)
+
+some other file with imports and definitions of functions and have print in it. let this is fileY. If you import fileY it will auto run but you can avoid it by saying if __name__="__main__"
+
+:vert terminal to exit - ctrl+w then arrow
+
+shift+v - visual line (go to a line and do this)
+then click x and not the lines are copied
+then go to a different line and click p to paste
+
+shift+G takes you to the end of file
+
+gg takes you to beginning of file
+
+ctrl+N - 
+
+    read["Decade"]=(read.index//10)*10
+    print(read["Decade"])
+this adds a new column
