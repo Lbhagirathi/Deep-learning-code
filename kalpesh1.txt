@@ -1,0 +1,95 @@
+run time errors
+
+>>> x=int(input())
+... print(10/x)
+... 
+
+Traceback (most recent call last):
+  File "<python-input-4>", line 1, in <module>
+    x=int(input())
+ValueError: invalid literal for int() with base 10: ''
+
+>>> try:
+...     x=int(input())
+...     print(10/x)
+...     
+... except ZeroDivisionError:
+...     print("Division by zero!")
+... 
+... except ValueError:
+...     print("Invalid input")
+...     
+5
+2.0
+>>> try:
+...     x=int(input())
+...     print(10/x)
+...     
+... except ZeroDivisionError:
+...     print("Division by zero!")
+... 
+... except ValueError:
+...     print("Invalid input")
+...     
+0
+Division by zero!
+>>> try:
+...     x=int(input())
+...     print(10/x)
+...     
+... except ZeroDivisionError:
+...     print("Division by zero!")
+... 
+... except ValueError:
+...     print("Invalid input")
+...     
+[6,7]
+Invalid input
+
+make data.txt 
+then run 2_el_fi.py
+depending on what is there in the txt file it will provide the output
+
+saying super you are calling your parent class, 
+Exception (parent class)---> insufficient balance error 
+create your own exceptions
+
+data cleaning
+
+make test cases in the triangle code
+
+logging levels -
+import logging
+logging.
+
+disabling logging -
+
+lower priority than critical will be disabled (logging.disable(logging.critical))
+useful for silent execution and testing
+this suppresses all messages up to the highest level
+
+exams questions?
+1. giving a program and ask us to write unit test cases
+2. He will run our test cases and if finds the test cases he will award marks
+3. mutation testing - to identify the strength of the test cases
+4. your test cases should identify all the small problems
+
+how do you debug your program?
+print statements - 
+debug your program interactively - it will stop at some point step by step it will execute
+
+built in python debugger
+set_trace() - it will execute step by step from this line
+
+n - next line
+s - step into function
+c - continue
+p var - print variable
+q - quit
+w - show stack
+
+debug the program - marks.py
+write unit test cases for this file and then run 
+you have to write unit test cases to debug
+
+
