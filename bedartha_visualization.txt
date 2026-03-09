@@ -1,0 +1,22 @@
+why is it important?
+helps in informing visualisation
+easy to see patterns in data not visible in textual/tabular format.
+helps in forming hypothesis
+x,y array and value for each, x and y are latitudes and longitudes
+measure temperature in these x,y arrays
+I have x,y,temperature.... 
+heat map visualization
+collapse a third dimension using colors, sizes, etc
+
+where can it go wrong?
+heights - axis goes from 5ft to 6ft - the whole body is projected so this looks like a small guy in 5ft - just cover the the body
+the relative size
+when axis limits are inconsistent with intent
+if axis and data series labels are inconsistent/wrong/missing
+if size of markers on plot are not defined proper to volume
+geslatt principles - 
+sequential colormaps - when it is all positive values
+or else should start at zero at the midpoint and diverge
+colour blindness - stacked bar charts - red green colour blindness
+rainbow jet colormap - avoid the rainbow color map at all costs
+if line plots are not justified (that is underlying data is not continuous)
