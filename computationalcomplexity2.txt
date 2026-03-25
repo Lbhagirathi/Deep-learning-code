@@ -1,0 +1,73 @@
+ignore b and a (ignore lower order terms)
+constants we dont have control on 
+no value of constants
+
+suppose we have complexity
+5n+30
+6000n+90
+
+algo1-nlogn - better function - it grows slowly
+algo2-n^2 - it grows fast
+
+100nlogn - i am being unfair - 10^6 instructions/sec
+n^2 - 10^9 instructions/sec
+
+if n=1000
+time1=100*1000*log1000/10^6 sec
+
+time2 = (1000)^2/10^9 sec
+
+when is t1<t2?
+
+1000nlogn>n^2 (always?)
+value of n=2*10^6?
+n=2^10 the inequality still holds
+n=2^20 the inequality doesnt hold
+n=2^15 the inequality doesnt hold
+
+
+this highlghts the importance of constants - there is always an no which makes one algorithm better than the other one and vice versa n<no
+
+hybrid algorithm - use one algorithm when  n is small and change it to some other algorithm when n is large
+
+f(n)=O(g(n))
+"=" = membership
+O(g(n)) all possible function (collection) 
+f(n) functions which belongs to g(n) where there is a constant no beyond which 0<=f(n)<=c*g(n)
+
+upper bound is this
+so what is the lower bound?
+0<=c*g(n)<=f(n) for n>=no
+big omega
+
+tight bound theta?
+pick c1 and c2 such that 0<=c1g(n)<=f(n)<=c2g(n) for n>=no
+
+lower bound is for problem
+upper bound is for algorithm
+
+show that 2n^2+n+1=O(n^2). can you choose c=2?
+cannot choose c=2, 
+c=10, n=1
+
+true or false?
+f(n)=O(g(n)) and g(n)=O(h(n)) then f(n)=O(h(n))
+c=c1*c2 and max(n1,n2)
+
+is 2^n+1=O(2^n)?
+
+is 2^2n=O(2^n)??
+
+are every two asymptotically positive functions related under O and omega? no
+nsin(n)=ncos(n)
+
+show that if f(n)=O(g(n)) and f(n)=omega(g(n))
+f(n)<=c1g(n) n>=n1
+f(n)>=c2g(n) n>=n2
+
+max(n1,n2)
+
+
+
+
+
