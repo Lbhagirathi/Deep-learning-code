@@ -1,0 +1,48 @@
+---------a(n-1)-------------
+
+partitioning
+average case
+n-> n/2 n/2-> n/4 n/4 n/4 n/4...... logn steps (height of the chain)
+
+complexity nlogn top to bottom
+
+worst case
+choosing a pivot in 0 ---- left is zero
+n-> 0 n-1-> 0 n-2..... n steps
+
+extraspace order(1)
+
+complexity n^2
+
+merge sort
+a0<a1<a2....<an-1   1 3 5 8 9 11
+b0<b1<b2....<bn-1   2 4 5 7 12 15
+
+merge and sort
+reason - effort in merging complexity nlogn bottom up
+worst case
+nlogn
+extra space order(n)
+
+temp
+
+recursion is the height and its the steps
+
+merge sort should be the winner?
+but the extra space is order(n) for merge sort so its the disadv
+
+most of the time quick sort wins
+
+read data - time
+
+memory estimation
+python integer - 28 bytes
+1ram - 1 gb
+n=10^9/28
+
+experiment
+
+where does data resides in this computation - cache disk cloud .....
+
+shuf -i 1-10
+

@@ -1,0 +1,15 @@
+visual hierarchy
+
+-size
+-llocation
+-color
+
+matplotlib
+-linewidth(lw), linestyle(ls)
+-opacity(alpha)
+-different colors (inline with gessalt principle)
+-zorder (in z direction)
+
+plot(avg,color 'r', zorder=0)
+plot(---,color 'green',zorder=1)
+

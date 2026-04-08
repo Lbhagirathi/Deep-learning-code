@@ -1,0 +1,66 @@
+computational problem
+
+data structure - a systematic way of organizing and managing and storing data
+
+algorithm - a finite sequence of computational steps that takes an input and produces output on execution of steps in finite time.
+
+main characteristics:
+
+finite sequence of steps
+unambiguous computational steps
+
+aspects of algorithms
+design
+correctness
+efficiency - time (operations, I/O multiple levels)
+
+data can remain in multiple places and the time varies accordingly
+
+communication (size and number of messages, Initial delay)
+
+space
+
+how to measure efficiency of an algorithm? As in other engineering domain can we use simulation on a computer
+
+challenge
+computer speeds have been changing
+
+inputs?-space?
+
+variation in programming language
+
+variation in translation from high level language to machine language
+
+resource sharing on a computer may affect execution time
+
+how to solve?
+fix a model of computation
+
+fix basic sets of instructions
+
+complexity (efficiency) as a function of the size of input f(n) number of basic steps for input size n
+
+f(n)=n^2 10->100
+
+min=i     some time c1
+for k=i+1 to j     some time c2 (k=i+1) and c3(i+1 to j)*(j-i)
+	if A[k]<A[min]  some time c4*(j-i-1)
+		min=k   some time c5*tk
+	k=k+1    c6*(j-i-1)
+return min c7
+
+An+B+c5*tk
+
+worst case tk=n-1
+
+A'n+B'
+
+Best possibility
+An+B
+
+average 
+A''n+B''
+
+
+
+for termination you need one extra test
