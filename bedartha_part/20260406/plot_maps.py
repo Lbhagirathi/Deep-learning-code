@@ -19,11 +19,20 @@ cax=fig.add_axes([0.85,0.10,0.05,0.80])
 
 im=ax.pcolormesh(t2m['longitude'],t2m['latitude'],t2m.mean(dim='valid_time'),cmap=('bone'),transform=crs,) #sequential vs diverging colormap
 
-crs=ccrs.PlateCarree()
+# crs=ccrs.PlateCarree()
 
 ax.coastlines()
 ax.add_feature(cfeature.BORDERS,color='k')
 ax.add_feature(cfeature.RIVERS,color='k',linestyle='--')
 gl=ax.gridlines(crs=crs,draw_labels=True,linewidth=0.5,color='gray',alpha=0.5,linestyle='-.')
 
+pl.colorbar(im, cax=cax, label="Temperature (°C)")
+
 pl.show()
+
+
+# t2m.isel(valid_time=0)
+
+# t2m.groupby('valid_time.season').mean()
+
+# t2m.max(dim='valid_time')

@@ -1,0 +1,227 @@
+ALGORITHM ANALYSIS OF FINDING MINIMUM ELEMENT
+
+PROBLEM
+
+We analyze the time complexity of an algorithm that finds the minimum element between indices i and j in an array.
+
+Pseudo-code:
+
+min = i
+for k = i+1 to j
+  if A[k] < A[min]
+    min = k
+  k = k + 1
+return min
+
+ASSIGN CONSTANT TIME TO EACH OPERATION
+
+In algorithm analysis we assume each basic operation takes constant time.
+
+min = i → time c1
+k = i + 1 → time c2
+loop condition check → time c3
+comparison A[k] < A[min] → time c4
+min = k → time c5
+k = k + 1 → time c6
+return min → time c7
+
+NUMBER OF LOOP ITERATIONS
+
+The loop runs from
+
+k = i+1 to j
+
+Number of iterations = j - i
+
+Let
+
+n = j - i + 1
+
+Therefore
+
+j - i = n - 1
+
+COUNT HOW MANY TIMES EACH STATEMENT EXECUTES
+
+Initialization
+
+min = i
+Executes once.
+
+Cost = c1
+
+Loop initialization
+
+k = i + 1
+Executes once.
+
+Cost = c2
+
+Loop condition
+
+k <= j is checked every iteration.
+
+Number of checks = (j - i)
+
+Cost = c3(j - i)
+
+Comparison
+
+if A[k] < A[min]
+
+Executed once per iteration.
+
+Number of executions = (j - i)
+
+Cost = c4(j - i)
+
+Update minimum
+
+min = k
+
+This happens only when a smaller element is found.
+
+Let
+
+tk = number of times the minimum is updated
+
+Cost = c5 * tk
+
+Increment step
+
+k = k + 1
+
+Executed (j - i - 1) times.
+
+Cost = c6(j - i - 1)
+
+Return statement
+
+return min
+
+Executed once.
+
+Cost = c7
+
+TOTAL RUNNING TIME
+
+Add all costs:
+
+T(n) =
+c1
+
+c2
+c3(j - i)
+c4(j - i)
+c5tk
+c6(j - i - 1)
+c7
+
+Group terms together.
+
+All terms involving (j - i) combine into constants.
+
+Therefore we write:
+
+T(n) = An + B + c5tk
+
+where
+
+A combines c3, c4, c6
+B combines c1, c2, c7
+
+MEANING OF tk
+
+tk represents the number of times the statement
+
+min = k
+
+executes.
+
+This depends on the order of elements in the array.
+
+WORST CASE
+
+Worst case happens when every new element is smaller than the previous minimum.
+
+Example array:
+
+9 8 7 6 5 4
+
+Here the minimum gets updated every iteration.
+
+So
+
+tk = n - 1
+
+Substitute into the formula:
+
+T(n) = An + B + c5(n - 1)
+
+Combine constants:
+
+T(n) = A'n + B'
+
+Thus worst case complexity grows linearly.
+
+BEST CASE
+
+Best case occurs when the first element is already the minimum.
+
+Example array:
+
+1 5 6 8 9
+
+The condition A[k] < A[min] is never true.
+
+So
+
+tk = 0
+
+Substitute:
+
+T(n) = An + B
+
+The complexity is still linear.
+
+AVERAGE CASE
+
+Average case assumes the elements are randomly ordered.
+
+The minimum update happens sometimes but not every time.
+
+Expected number of updates is proportional to n.
+
+So the running time becomes
+
+T(n) = A''n + B''
+
+FINAL RESULT
+
+Best case time
+
+T(n) = An + B
+
+Worst case time
+
+T(n) = A'n + B'
+
+Average case time
+
+T(n) = A''n + B''
+
+Ignoring constants and lower order terms:
+
+Time Complexity = O(n)
+
+KEY IDEA
+
+The algorithm must inspect every element at least once to guarantee the correct minimum.
+
+Therefore no algorithm can do better than
+
+Omega(n)
+
+for this problem.
+
+Thus this algorithm is optimal.

@@ -13,3 +13,31 @@ matplotlib
 plot(avg,color 'r', zorder=0)
 plot(---,color 'green',zorder=1)
 
+gessalt principle: the more similar two elements are, the more likely they are to be perceived as part of the same group 
+
+The Gestalt principles describe how our brain naturally organizes visual information into meaningful patterns rather than seeing separate elements.
+
+When someone says “different colors (inline with Gestalt principle)”, they’re usually referring to one specific rule within Gestalt:
+
+🎨 Law of Similarity
+
+Objects that share similar features—like color, shape, or size—are perceived as part of the same group.
+
+Same color → seen as related
+Different colors → seen as separate groups
+
+👉 Example:
+If you have a chart where some points are blue and others are red, your brain instantly groups all blue points together and all red points together—even if they’re mixed spatially.
+
+Other key Gestalt principles (quick context)
+Proximity → things close together feel grouped
+Continuity → we prefer smooth, continuous lines
+Closure → we “fill in” missing parts of shapes
+Figure–ground → we separate object from background
+Why it matters
+
+Using different colors intentionally helps:
+
+Improve clarity in graphs or UI
+Highlight categories or patterns
+Guide attention without extra explanation

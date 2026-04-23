@@ -43,4 +43,4 @@ def exp4():
         print(f"n={n}, time={t/times}")
 
 if __name__ == "__main__":
-    exp4()
+    exp2()

@@ -1,0 +1,21 @@
+2026-03-21 22:42:24,394 INFO:Bank application started
+2026-03-21 22:42:24,394 DEBUG:Created account 101 for Alice
+2026-03-21 22:42:24,394 DEBUG:Created account 102 for Bob
+2026-03-21 22:42:24,394 DEBUG:Attempting deposit: 200
+2026-03-21 22:42:24,394 INFO:Deposited 200. New balance: 1200
+2026-03-21 22:42:24,394 DEBUG:Attempting withdrawal: 150
+2026-03-21 22:42:24,394 INFO:Withdrawn 150. New balance: 1050
+2026-03-21 22:42:24,394 INFO:Initiating transfer of 300 from 101 to 102
+2026-03-21 22:42:24,394 DEBUG:Attempting withdrawal: 300
+2026-03-21 22:42:24,394 INFO:Withdrawn 300. New balance: 750
+2026-03-21 22:42:24,394 DEBUG:Attempting deposit: 300
+2026-03-21 22:42:24,394 INFO:Deposited 300. New balance: 800
+2026-03-21 22:42:24,394 INFO:Transfer completed successfully
+2026-03-21 22:42:24,394 DEBUG:Transfer operation ended
+2026-03-21 22:42:24,394 INFO:Initiating transfer of 5000 from 101 to 102
+2026-03-21 22:42:24,394 DEBUG:Attempting withdrawal: 5000
+2026-03-21 22:42:24,394 WARNING:Withdrawal failed for account 101: Insufficient balance
+2026-03-21 22:42:24,394 ERROR:Transfer failed: Insufficient balance
+2026-03-21 22:42:24,394 DEBUG:Transfer operation ended
+2026-03-21 22:42:24,394 CRITICAL:Unexpected error: Insufficient balance
+2026-03-21 22:42:24,394 INFO:Bank application terminated

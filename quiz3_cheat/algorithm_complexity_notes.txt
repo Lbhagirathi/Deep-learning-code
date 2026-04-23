@@ -1,0 +1,192 @@
+ALGORITHMS AND COMPLEXITY – STRUCTURED NOTES
+
+1.  COMPUTATIONAL PROBLEM A computational problem is a problem that can
+    be solved using a computer through a sequence of logical steps.
+
+It requires: - Input (data given to the algorithm) - Processing steps -
+Output (result produced)
+
+Examples: - Sorting numbers - Finding the minimum element - Searching in
+a dataset
+
+2.  DATA STRUCTURE A data structure is a systematic way of organizing,
+    storing, and managing data so that it can be accessed and modified
+    efficiently.
+
+Examples: - Arrays - Linked Lists - Trees - Graphs - Hash Tables
+
+3.  ALGORITHM An algorithm is a finite sequence of computational steps
+    that:
+4.  Takes input
+5.  Executes clear instructions
+6.  Produces output
+7.  Terminates in finite time
+
+Main Characteristics: - Finite sequence of steps - Unambiguous
+instructions - Defined input and output - Executable operations
+
+4.  ASPECTS OF ALGORITHMS
+
+Algorithm analysis focuses on:
+
+Design How the algorithm is constructed. Examples include divide and
+conquer, greedy methods, and dynamic programming.
+
+Correctness The algorithm must produce correct results for all valid
+inputs.
+
+Efficiency Efficiency is measured in terms of time and space.
+
+5.  TIME COMPLEXITY Time complexity measures how long an algorithm takes
+    to run as input size increases.
+
+It can involve: - Number of operations - I/O operations - Communication
+cost in distributed systems
+
+6.  SPACE COMPLEXITY Space complexity measures the amount of memory used
+    by an algorithm, including:
+
+-   Variables
+-   Data structures
+-   Recursion stack
+
+7.  WHY RUNTIME IS HARD TO MEASURE DIRECTLY
+
+Execution time depends on: - Computer processor speed - Programming
+language used - Compiler optimizations - Input size - Other programs
+sharing CPU resources
+
+Because of these factors, direct timing is unreliable for comparing
+algorithms.
+
+8.  SOLUTION: ABSTRACT MODEL OF COMPUTATION
+
+To compare algorithms fairly we: 1. Fix a computational model (e.g., RAM
+model) 2. Define basic operations 3. Count the number of basic steps
+
+Efficiency becomes a function of input size n.
+
+f(n) = number of basic operations required for input size n
+
+9.  EXAMPLE: FINDING MINIMUM ELEMENT
+
+Pseudo-code:
+
+min = i for k = i+1 to j if A[k] < A[min] min = k return min
+
+Each step has a constant time cost.
+
+Total time can be written as: T(n) = An + B + c5 * tk
+
+Where tk is the number of times the assignment occurs.
+
+Worst Case: tk = n − 1 Occurs when every new element is smaller than the
+current minimum.
+
+Best Case: The first element is already the minimum.
+
+Average Case: Assignment occurs a fraction of the time.
+
+For complexity analysis we ignore: - Constant factors - Lower-order
+terms
+
+Example: 5n + 30 becomes O(n).
+
+10. IMPORTANCE OF CONSTANTS
+
+Consider two algorithms:
+
+Algorithm 1: 100 n log n Algorithm 2: n^2
+
+Suppose: Machine 1 executes 10^6 instructions/sec Machine 2 executes
+10^9 instructions/sec
+
+For small input sizes, the slower-growing function may still take more
+time due to constants.
+
+This shows constants matter for small n.
+
+11. HYBRID ALGORITHMS
+
+Sometimes two algorithms are combined.
+
+Use: - One algorithm for small inputs - Another algorithm for large
+inputs
+
+Example: insertion sort + quicksort in practical libraries.
+
+12. ASYMPTOTIC NOTATION
+
+Asymptotic notation describes growth rate of functions for large input
+sizes.
+
+13. BIG-O NOTATION
+
+f(n) = O(g(n))
+
+Meaning: 0 ≤ f(n) ≤ c g(n) for n ≥ n0
+
+Big-O provides an upper bound on growth rate.
+
+14. BIG-OMEGA NOTATION
+
+f(n) = Ω(g(n))
+
+Meaning: 0 ≤ c g(n) ≤ f(n) for n ≥ n0
+
+This provides a lower bound.
+
+15. THETA NOTATION
+
+f(n) = Θ(g(n))
+
+Meaning: 0 ≤ c1 g(n) ≤ f(n) ≤ c2 g(n) for n ≥ n0
+
+This represents a tight bound.
+
+16. UPPER VS LOWER BOUNDS
+
+Upper bound → property of an algorithm. Lower bound → property of a
+problem.
+
+Example: Comparison-based sorting has a lower bound of Ω(n log n).
+
+17. PROOF EXAMPLE
+
+Show that: 2n^2 + n + 1 = O(n^2)
+
+We want: 2n^2 + n + 1 ≤ c n^2
+
+Choose c = 10.
+
+For n ≥ 1: 2n^2 + n + 1 ≤ 10n^2
+
+Therefore: 2n^2 + n + 1 = O(n^2).
+
+18. TRANSITIVITY PROPERTY
+
+If: f(n) = O(g(n)) and g(n) = O(h(n))
+
+Then: f(n) = O(h(n))
+
+Because: f(n) ≤ c1 g(n) g(n) ≤ c2 h(n)
+
+Thus: f(n) ≤ c1 c2 h(n).
+
+19. EXPONENTIAL EXAMPLES
+
+2^n + 1 = O(2^n) True because constant terms become negligible.
+
+2^(2n) = O(2^n) False because: 2^(2n) = 4^n which grows much faster.
+
+20. FUNCTIONS NOT ALWAYS COMPARABLE
+
+Example: f(n) = n sin(n) g(n) = n cos(n)
+
+Both oscillate, so neither dominates the other asymptotically.
+
+21. IMPORTANT RESULT
+
+If: f(n) = O(g(n)) and f(n) = Ω(g(n))
+
+Then: f(n) = Θ(g(n)).

@@ -1,0 +1,65 @@
+head online.csv                      # show the first 10 lines of online.csv (preview file) :contentReference[oaicite:0]{index=0}
+help(head)                           # show help/documentation for the head command in the shell
+man head                             # open the manual page for head
+
+head -n 4 online.csv                 # display the first 4 lines of online.csv
+
+ls -l                                # list files in long format (permissions, size, date, owner)
+man ls                               # open manual page for ls command
+
+ls -t                                # list files sorted by modification time (newest first)
+ls -lt                               # list files in long format sorted by time
+
+ls -t | head -n 4                    # show the 4 most recently modified files
+ls -lt | head -n 4                   # show detailed info for the 4 most recent files
+
+man wc                               # open manual page for wc (word count)
+
+wc -l online.csv                     # count number of lines in online.csv
+ls -l | wc -l                        # count number of lines in ls output (including header)
+ls -l | tail -n +2 | wc -l           # count files excluding the first header line
+
+ls -a                                # list all files including hidden files (starting with .)
+
+cat online.csv | wc -l               # count lines in online.csv by piping output of cat
+
+man cut                              # open manual page for cut command
+
+cut -d ',' -f 1 online.csv | head -n 2
+                                     # extract first column (comma separated) and show first 2 rows
+
+man uniq                             # open manual page for uniq command
+
+sort online.csv | uniq -c            # count occurrences of duplicate lines
+sort online.csv | uniq -c | head -n 2
+                                     # show first 2 counted unique entries
+
+sort online.csv | uniq -c | sort -nr | head -n 2
+                                     # show the two most frequent lines (sorted by count)
+
+cut -d ',' -f 1 online.csv | tail -n +2 | sort | uniq -u | wc -l
+                                     # count values that appear only once in column 1 (excluding header)
+
+cut -d ',' -f 1 online.csv | tail -n +2 | sort | uniq -u | wc -l | less
+                                     # same as above but output shown through pager
+
+cut -d ',' -f 1 online.csv | tail -n +2 | sort | uniq -u | less
+                                     # view unique values in column 1 interactively
+
+cut -d ',' -f 1 online.csv | tail -n +2 | sort | uniq | wc -l
+                                     # count number of unique values in column 1
+
+cat online.csv | grep 'India' | wc -l
+                                     # count lines containing the word "India"
+
+cat online.csv | grep 'India' | wc -l | less
+                                     # count lines with "India" and show result in pager
+
+for FILE in $data/*; do
+    echo "$FILE"
+    # Add your processing commands here
+    done
+                                         # loop through files in $data directory and print their names
+
+ awk -F',' -v c="$country" '$1 == c' "$INPUT_FILE" > "$OUTPUT_DIR/${country}.csv"
+                                            # extract rows where first column matches $country and save to new file in $OUTPUT_DIR

@@ -1,0 +1,60 @@
+1. ValueError
+The type is correct, but the value is inappropriate
+
+x = int("abc")   # ❌ string cannot be converted to int
+
+Type = str → acceptable for int()
+Value = "abc" → invalid
+
+2. TypeError
+The type itself is wrong
+
+x = 5 + "10"   # ❌ int + str
+
+3. KeyError
+Trying to access a missing key in a dictionary
+
+d = {"name": "John"}
+print(d["marks"])   # ❌ key doesn't exist
+
+“Key not found”
+
+4. IndexError
+Accessing an index that doesn’t exist in a list/tuple
+
+lst = [1, 2, 3]
+print(lst[5])   # ❌ out of range
+
+5. ZeroDivisionError
+Division by zero
+
+x = 10 / 0   # ❌ undefined
+
+6. FileNotFoundError
+File does not exist
+
+open("data.txt")   # ❌ file missing
+
+7. PermissionError
+You don’t have access to the file
+
+open("protected.txt", "w")   # ❌ no permission
+
+8. IOError / OSError
+Meaning:
+
+General file/system-related errors
+
+Examples:
+Disk full
+File corrupted
+Hardware issues
+
+“Something went wrong with I/O”
+
+9. EOFError
+Input ended unexpectedly
+
+input()   # ❌ no input available (in some environments)
+
+“No more input”
